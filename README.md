@@ -9,8 +9,9 @@ La aplicación permite **añadir**, **listar**, **editar**, **eliminar** y **fil
 
 ## Entorno utilizado
 
+* Ubuntu 24.04
 * Servidor web con soporte PHP (Apache + PHP).
-* Navegador web moderno.
+* Navegador web (en este caso, mozilla).
 * Archivos PHP ubicados en el directorio del servidor web (por ejemplo `/var/www/html/futbolistas/`).
 
 ---
@@ -235,6 +236,91 @@ if (str_contains(strtolower($lista[$i]), strtolower($cadena))) {
 
 * `str_contains()` comprueba si el nombre contiene la palabra.
 * `strtolower()` evita problemas de mayúsculas/minúsculas.
+
+---
+
+---
+
+## Pruebas de funcionamiento de la aplicación
+
+A continuación se muestran las pruebas realizadas para comprobar que **todas las funcionalidades de la aplicación PHP funcionan correctamente**.
+
+---
+
+### Prueba del funcionamiento del índice
+
+En esta prueba se observa la página principal (`indice.php`) mostrando correctamente la lista de futbolistas almacenados en la sesión, junto con las opciones disponibles para añadir, editar y eliminar.
+
+<figure>
+  <img src="./Imágenes/page06_img01_cropped.png">
+</figure>
+
+---
+
+### Prueba de la funcionalidad de añadir futbolista
+
+En esta prueba se muestra el formulario de añadir (`añadir.php`) y se verifica que, tras introducir un nombre y enviarlo, el futbolista se añade correctamente al índice.
+
+<figure>
+  <img src="./Imágenes/page06_img02_cropped.png">
+</figure>
+
+<figure>
+  <img src="./Imágenes/page06_img03_cropped.png">
+</figure>
+
+---
+
+### Prueba de la funcionalidad de editar
+
+En esta prueba se comprueba que al pulsar sobre la opción **Editar**, se carga correctamente el formulario con el nombre del futbolista seleccionado y que, tras guardar los cambios, el nombre se actualiza en la lista principal.
+
+<figure>
+  <img src="./Imágenes/page07_img01_cropped.png">
+</figure>
+
+<figure>
+  <img src="./Imágenes/page07_img02_cropped.png">
+</figure>
+
+---
+
+### Prueba de la funcionalidad de eliminar
+
+En esta prueba se verifica que al eliminar un futbolista (en este caso ha sido el pobre de Vinicius), este desaparece correctamente del listado y el resto de elementos se reorganizan sin errores.
+
+<figure>
+  <img src="./Imágenes/page07_img03_cropped.png">
+</figure>
+
+---
+
+### Prueba de la funcionalidad de filtrar
+
+Por último, se comprueba el correcto funcionamiento del filtro de búsqueda.
+Al introducir una parte del nombre del futbolista, el sistema devuelve únicamente los resultados que coinciden con la cadena introducida.
+
+<figure>
+  <img src="./Imágenes/page08_img01_cropped.png">
+</figure>
+
+<figure>
+  <img src="./Imágenes/page08_img02_cropped.png">
+</figure>
+
+---
+
+## Verificación final
+
+Tras realizar todas las pruebas anteriores, se confirma que:
+
+* La funcionalidad de **añadir** futbolistas funciona correctamente.
+* La **edición** de futbolistas actualiza los datos sin errores.
+* La opción de **eliminar** elimina correctamente los registros.
+* El **filtro de búsqueda** devuelve los resultados esperados.
+* El uso de **sesiones PHP** mantiene los datos durante toda la ejecución.
+
+Por lo tanto, se concluye que **la aplicación, ¡funciona correctamente!**.
 
 ---
 
